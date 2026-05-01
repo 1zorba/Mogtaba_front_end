@@ -1,7 +1,6 @@
 // src/api.js
 import axios from 'axios';  
-
-const BASE_URL = 'http://127.0.0.1:8000/api';
+const BASE_URL = 'https://mogtaba-backend.onrender.com/api';
 export const createProject = async (projectData) => {
     const token = localStorage.getItem("token");
     const formData = new FormData();
@@ -232,7 +231,7 @@ export const updatePoem = async (id, data) => {
     // جلب التوكن (تأكد من الاسم الذي استخدمته عند التخزين، غالباً 'token' أو 'access_token')
     const token = localStorage.getItem('token'); 
 
-    return await axios.post(`http://127.0.0.1:8000/api/UpdatePoem/${id}`, data, {
+    return await axios.post(`https://mogtaba-backend.onrender.com/apiUpdatePoem/${id}`, data, {
         headers: { 
             'Content-Type': 'multipart/form-data',
             'Authorization': `Bearer ${token}` // إرسال التوكن لتعريف السيرفر بهويتك
