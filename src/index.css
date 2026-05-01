@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+body {
+  @apply bg-[#0f172a] text-white; /* استخدمنا القيمة مباشرة للتأكد من العمل */
+  direction: rtl;
+  font-family: sans-serif; /* سنعدل الخط لاحقاً */
+}
+
+html {
+  scroll-behavior: smooth;
+}
