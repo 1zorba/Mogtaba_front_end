@@ -231,7 +231,7 @@ export const updatePoem = async (id, data) => {
     // جلب التوكن (تأكد من الاسم الذي استخدمته عند التخزين، غالباً 'token' أو 'access_token')
     const token = localStorage.getItem('token'); 
 
-    return await axios.post(`https://mogtaba-backend.onrender.com/apiUpdatePoem/${id}`, data, {
+    return await axios.post(` ${BASE_URL}/UpdatePoem/${id}`, data, {
         headers: { 
             'Content-Type': 'multipart/form-data',
             'Authorization': `Bearer ${token}` // إرسال التوكن لتعريف السيرفر بهويتك
