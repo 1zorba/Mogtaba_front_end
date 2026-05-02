@@ -22,7 +22,7 @@ const Hero = () => {
   const hoursDegrees = ((time.getHours() % 12 + time.getMinutes() / 60) / 12) * 360;
   // -----------------------
 
-  const STORAGE_URL = "http://127.0.0.1:8000";
+ const STORAGE_URL = 'https://mogtaba-backend.onrender.com/api';
 
   useEffect(() => {
     const loadHeroData = async () => {
@@ -41,7 +41,7 @@ const Hero = () => {
   const getProfileImage = () => {
     return profileData?.profile?.profile_image 
       ? `${STORAGE_URL}/storage/${profileData.profile.profile_image}`
-      : "/src/assets/mogtaba1.jpg";
+      : "https://mogtaba-backend.onrender.com/storage/mogtaba1.jpg";
   };
 
   const socialLinks = [
