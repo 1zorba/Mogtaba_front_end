@@ -2,7 +2,8 @@
 import axios from 'axios';  
 
  
-const BASE_URL = 'https://mogtaba-backend.onrender.com/api';
+const BASE_URL = import.meta.env.VITE_API_BASE_URL,
+ STORAGE_URL = import.meta.env.VITE_STORAGE_URL; // تأكد من أن هذا هو الرابط الصحيح لملفات الصور
 export const createProject = async (projectData) => {
     const token = localStorage.getItem("token");
     const formData = new FormData();
