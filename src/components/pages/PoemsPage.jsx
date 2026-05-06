@@ -14,7 +14,7 @@ const PoemsPage = () => {
     window.scrollTo(0, 0);
     const fetchPoems = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:8000/api/showPoems');
+        const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL}showPoems`);
         const data = response.data.message || [];
         setPoems(data);
         // عرض أول قصيدة تلقائياً عند التحميل
