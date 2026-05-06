@@ -15,7 +15,7 @@ const Login = () => {
 
     try {
       // إرسال الطلب إلى سيرفر لارافل الخاص بك
-      const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/login`, {
+      const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/login`, {
         params: { email, password },
       });
 
